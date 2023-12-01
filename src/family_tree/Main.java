@@ -1,11 +1,27 @@
 package family_tree;
 
+import family_tree.human.Human;
+import family_tree.writer.FileHandler;
+
 import java.time.LocalDate;
 
 public class Main {
     public static void main(String[] args) {
-    FamilyTree tree = testTree();
+    FamilyTree tree = load();
         System.out.println(tree);
+        //save(tree);
+    }
+
+    private static FamilyTree load(){
+        String filePath = "src/family_tree/writer/tree.txt";
+        FileHandler fileHandler = new FileHandler();
+        return (FamilyTree) fileHandler.read(filePath);
+    }
+
+    private static void save(FamilyTree tree){
+        String filePath = "src/family_tree/writer/tree.txt";
+        FileHandler fileHandler = new FileHandler();
+        fileHandler.save(tree, filePath);
     }
 
     static FamilyTree testTree(){
