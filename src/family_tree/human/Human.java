@@ -1,8 +1,6 @@
 package family_tree.human;
 
 
-import family_tree.Gender;
-
 import java.io.Serializable;
 import java.time.LocalDate;
 import java.time.Period;
@@ -196,5 +194,8 @@ public class Human implements Serializable {
         }
         Human human = (Human) obj;
         return human.getId() == getId();
+    }
+
+    public static class HumanComparatorByName implements java.util.Comparator<? super Human> {
     }
 }

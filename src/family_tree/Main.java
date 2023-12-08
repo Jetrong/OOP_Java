@@ -1,5 +1,7 @@
 package family_tree;
 
+import family_tree.family_tree.FamilyTree;
+import family_tree.human.Gender;
 import family_tree.human.Human;
 import family_tree.writer.FileHandler;
 
@@ -27,7 +29,7 @@ public class Main {
     static FamilyTree testTree(){
         FamilyTree tree = new FamilyTree();
 
-        Human vasya = new Human("Василий",Gender.Male, LocalDate.of(1963,12,10));
+        Human vasya = new Human("Василий", Gender.Male, LocalDate.of(1963,12,10));
         Human masha = new Human("Мария", Gender.Female, LocalDate.of(1965,9,15));
         tree.add(vasya);
         tree.add(masha);
