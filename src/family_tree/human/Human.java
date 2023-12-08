@@ -1,6 +1,8 @@
 package family_tree.human;
 
 
+import family_tree.family_tree.TreeNode;
+
 import java.io.Serializable;
 import java.time.LocalDate;
 import java.time.Period;
@@ -8,7 +10,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 
-public class Human implements Serializable {
+public class Human implements Serializable, TreeNode<Human> {
     private long id;
     private String name;
     private Gender gender;
@@ -196,6 +198,5 @@ public class Human implements Serializable {
         return human.getId() == getId();
     }
 
-    public static class HumanComparatorByName implements java.util.Comparator<? super Human> {
-    }
+
 }
